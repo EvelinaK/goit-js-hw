@@ -23,7 +23,7 @@ let flag = false;
 switch (country.toLowerCase()) {
   case "china":
     cost = 100;
-    //  flag=true
+
     console.log(`'Доставка в ${country} будет стоить ${cost} кредитов'`);
     break;
 
@@ -52,7 +52,3 @@ switch (country.toLowerCase()) {
   default:
     console.log("В вашей стране доставка не доступна");
 }
-// if(flag) {
-
-// }
-console.log(cost);

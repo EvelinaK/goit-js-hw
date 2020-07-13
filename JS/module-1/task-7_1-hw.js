@@ -50,7 +50,6 @@ console.log(rand);
 do {
   let num = prompt("Введите число!");
   if (num === null) {
-    console.log("отказ");
     break;
   }
   num = Number(num);
