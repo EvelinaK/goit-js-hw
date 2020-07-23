@@ -12,7 +12,6 @@ let total = 80;
 let ordered = 130;
 
 if (ordered > total) {
-  possibilityOrder = total;
   console.log(`На складе недостаточно твоаров!"`);
 } else {
   console.log(`заказ оформлен! с вами свяжется менеджер `);

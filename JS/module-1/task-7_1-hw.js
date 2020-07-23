@@ -42,10 +42,10 @@ console.log("пробуйте еще");
 // number[чис];
 // const x = Math.floor(Math.random() * 100) + 1;
 
-const to = 100;
-const from = 1;
+const to2 = 100;
+const from2 = 1;
 
-const rand = Math.round(Math.random() * (to - from) + from);
+const rand2 = Math.round(Math.random() * (to2 - from2) + from2);
 console.log(rand);
 do {
   let num = prompt("Введите число!");
@@ -56,13 +56,13 @@ do {
   if (Number.isNaN(num)) {
     console.log("это не число!");
     continue;
-  } else if (num > rand) {
+  } else if (num > rand2) {
     console.log("Число больше!");
     isVal = false;
-  } else if (num < rand) {
+  } else if (num < rand2) {
     console.log("Число меньше!");
     isVal = false;
-  } else if (rand === num) {
+  } else if (rand2 === num) {
     console.log("Вы угадали! Поздравляем!");
   }
 } while (1);
