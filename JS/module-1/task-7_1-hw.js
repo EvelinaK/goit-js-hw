@@ -19,7 +19,7 @@ do {
     break;
   }
   num = Number(num);
-  if (num !== NaN) {
+  if (Number.isNaN(num)) {
     console.log("это не число!");
     isVal = false;
   }
