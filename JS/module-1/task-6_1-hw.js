@@ -18,13 +18,14 @@
 
 let total = 0;
 let input;
+
 do {
   input = prompt("введите число!");
-  if (isNaN(input)) {
+  total += +input;
+  if (Number.isNaN(Number(input))) {
     alert("Было введено не число, попробуйте еще раз");
-  } else {
-    total += Number(input);
   }
-} while (input !== null && input);
+  total += +input;
+} while (input !== null);
 
 console.log(`Общая сумма ${total}`);

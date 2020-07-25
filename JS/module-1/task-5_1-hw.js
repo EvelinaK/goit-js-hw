@@ -13,45 +13,37 @@
 // Австралия - 170 кредитов
 // Индия - 80 кредитов
 // Ямайка - 120 кредитов
-
+const chinaPrice = 100;
+const chiliPrice = 250;
+const australiaPrice = 170;
+const indiaPrice = 80;
+const jamaikaPrice = 120;
 const country = prompt("в какую страну нужна доставка?");
 if (country !== null) {
   switch (country.toLowerCase()) {
     case "china":
-      const chinaPrice = 100;
-
-      console.log(
-        `'Доставка в ${country} будет стоить ${chinaPrice} кредитов'`
-      );
+      console.log(`Доставка в ${country} будет стоить ${chinaPrice} кредитов`);
       break;
 
     case "chili":
-      const chiliPrice = 250;
-      console.log(
-        `'Доставка в ${country} будет стоить ${chiliPrice} кредитов'`
-      );
+      console.log(`Доставка в ${country} будет стоить ${chiliPrice} кредитов`);
       break;
 
     case "australia":
-      const australiaPrice = 170;
       console.log(
-        `'Доставка в ${country} будет стоить ${australiaPrice} кредитов'`
+        `Доставка в ${country} будет стоить ${australiaPrice} кредитов`
       );
 
       break;
 
     case "india":
-      const indiaPrice = 80;
-      console.log(
-        `'Доставка в ${country} будет стоить ${indiaPrice} кредитов'`
-      );
+      console.log(`Доставка в ${country} будет стоить ${indiaPrice} кредитов`);
 
       break;
 
     case "jamaika":
-      const jamaikaPrice = 120;
       console.log(
-        `'Доставка в ${country} будет стоить ${jamaikaPrice} кредитов'`
+        `Доставка в ${country} будет стоить ${jamaikaPrice} кредитов`
       );
       break;
 
