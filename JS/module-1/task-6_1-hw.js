@@ -25,7 +25,7 @@ do {
   if (Number.isNaN(Number(input))) {
     alert("Было введено не число, попробуйте еще раз");
   }
-  total = +input;
+  Number.total += input;
 } while (input !== null);
 
 console.log(`Общая сумма ${total}`);
