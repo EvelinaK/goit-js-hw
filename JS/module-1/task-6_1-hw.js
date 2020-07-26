@@ -21,11 +21,12 @@ let input;
 
 do {
   input = prompt("введите число!");
-  total += +input;
+
   if (Number.isNaN(Number(input))) {
     alert("Было введено не число, попробуйте еще раз");
+    break;
   }
-  Number.total += input;
+  total += +input;
 } while (input !== null);
 
 console.log(`Общая сумма ${total}`);
