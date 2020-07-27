@@ -1,15 +1,9 @@
-// Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
-
-const findLongestWord = function (string) {};
+// Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку
+// (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // 'jumped'
-
-console.log(findLongestWord("Google do a roll")); // 'Google'
-
-console.log(findLongestWord("May the force be with you")); // 'force'
 
 function findLongestWord(str) {
   // Этап 1. Разбиваем строку на массив строк
@@ -18,13 +12,13 @@ function findLongestWord(str) {
   // var strSplit = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"];
 
   // Этап 2. Инициализируем переменную, которая будет содержать в себе размер самого длинного слова
-  let longestWord = 0;
+  let longestWord = "";
 
   // Этап 3. Создаем цикл FOR
   for (let i = 0; i < strSplit.length; i++) {
-    if (strSplit[i].length > longestWord) {
+    if (strSplit[i].length > longestWord.length) {
       // If strSplit[i].length больше, чем сравнимое слово...
-      longestWord = strSplit[i].length; // ...затем longestWord принимает новое значение
+      longestWord = strSplit[i]; // ...затем longestWord принимает новое значение
     }
   }
   /* Здесь strSplit.length = 9
@@ -45,4 +39,8 @@ function findLongestWord(str) {
   return longestWord; // 6
 }
 
-// https://www.internet-technologies.ru/articles/tri-sposoba-nayti-samoe-dlinnoe-slovo-v-stroke-javascript.html
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // 'jumped'
+
+console.log(findLongestWord("Google do a roll")); // 'Google'
+
+console.log(findLongestWord("May the force be with you")); // 'force'

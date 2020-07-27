@@ -9,10 +9,7 @@
 const logItems = function (array) {
   // твой код
   for (let i = 0; i < array.length; i++) {
-    let index = i + 1;
-    console.log(
-      `[номер элемента :${index}] + [значение элемента :${array[i]}]`
-    );
+    console.log(` ${i + 1}-${array[i]}]`);
   }
 };
 

@@ -4,10 +4,7 @@
 //   и возвращающую цену гравировки всех слов в строке.
 
 const calculateEngravingPrice = function (message, pricePerWord) {
-  debugger;
-  let msg = message.split(" ").length;
-  let word = msg * pricePerWord;
-  return word;
+  return message.split(" ").length * pricePerWord;
 };
 console.log(
   calculateEngravingPrice(
