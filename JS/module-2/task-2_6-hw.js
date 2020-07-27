@@ -21,7 +21,6 @@ function sumInput() {
     if (input === "") {
       continue;
     }
-    debugger;
     numbers.push(+input);
   } while (input !== null);
 
