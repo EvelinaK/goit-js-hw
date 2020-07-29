@@ -18,7 +18,5 @@ user.premium = false;
 
 const users = Object.keys(user);
 for (const key of users) {
-  // console.log(key);
-  // console.log(user[key]);
   console.log(key + " = " + user[key]);
 }

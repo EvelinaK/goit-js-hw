@@ -3,13 +3,12 @@
 
 const countProps = function (obj) {
   const keys = Object.keys(obj);
-  debugger;
   let total = 0;
   for (let i = 0; i < keys.length; i++) {
     total = keys.length;
   }
-  console.log(total);
-  return;
+
+  return total;
 };
 console.log(countProps({ name: "Mango", age: 2 })); // 2
 
