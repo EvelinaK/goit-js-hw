@@ -25,5 +25,3 @@ const calculateTotalPrice = function (allProducts, productName) {
 console.log(calculateTotalPrice(products, "Радар")); // 5200
 
 console.log(calculateTotalPrice(products, "Дроид")); // 2800
-
-console.log(calculateTotalPrice(products, "Проблемы Кирилла"));

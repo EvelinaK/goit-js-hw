@@ -27,29 +27,27 @@ const account = {
   //  * Метод создает и возвращает объект транзакции.
   //  * Принимает сумму и тип транзакции.
   //  */
+  // generateId() {
+  //   return Math.trunc(Math.random() * 1000000);
+  // },
   createTransaction(amount, type) {
-    let transactionsNew = {};
-    transactionsNew.id = num;
-    transactionsNew.type = type;
-    transactionsNew.amount = amount;
-    return transactionsNew;
+    return {
+      id: Math.trunc(Math.random() * 1000000),
+      type: type,
+      amount: amount,
+    };
   },
 
-  generateId() {
-    let rand = 0 + Math.trunc(Math.random() * (999999 + 1 - 0));
-    return rand;
-  },
-
-  findId() {
-    while (true) {
-      let num = generateId();
-      if (this.idNum.indexOf(num) == -1) {
-        this.idNums.push(num);
-        break;
-      }
-    }
-    return num;
-  },
+  // findId() {
+  //   while (true) {
+  //     let num = generateId();
+  //     if (this.idNum.indexOf(num) == -1) {
+  //       this.idNums.push(num);
+  //       break;
+  //     }
+  //   }
+  //   return num;
+  // },
 
   /*
   
@@ -73,7 +71,7 @@ const account = {
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
   withdraw(amount) {
-    if (this.balance > amount) {
+    if (this.balance >= amount) {
       this.balance -= amount;
       this.transactions.push(this.createTransaction(amount, "withdraw"));
     }
@@ -94,7 +92,13 @@ const account = {
   /*
    * Метод ищет и возвращает объект транзакции по id
    */
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    for (const tran in this.transactions) {
+      if (tran.id == id) {
+        return tran;
+      }
+    }
+  },
 
   /*
    * Метод возвращает количество средств
@@ -102,9 +106,14 @@ const account = {
    */
   getTransactionTotal(type) {
     let total = 0;
-    for (const transaction in transaction) {
-      if (type === transaction.name) {
-        total += transaction.amount;
+    for (const tran in this.transactions) {
+      if (type === tran.name) {
+        total += tran.amount;
+      }
+    }
+    for (const tran in this.transactions) {
+      if (type === tran.name) {
+        total += tran.amount;
       }
     }
     return total;
@@ -117,4 +126,5 @@ account.withdraw(1000);
 account.withdraw(100);
 console.table(account.transactions);
 console.log(account.balance);
-console.log(account.findId(3));
+console.table(account.getTransactionDetails());
+console.table(account.getTransactionTotal(Transaction.WITHDRAW));

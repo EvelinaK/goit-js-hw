@@ -5,27 +5,16 @@
 //   "имя":"кол-во задач".
 
 const findBestEmployee = function (employees) {
-  // let maxValue = 0;
-  // // debugger;
-  // for (let key in employees) {
-  //   if (employees[key] > maxValue) {
-  //     maxValue = employees[key];
-  //   }
-  // }
-  // return maxValue;
-
-  const keys = Object.keys(employees);
+  let name;
   let maxValue = 0;
-  let keyn = 0;
-  for (const key of keys) {
-    keyn = key;
-  }
-  for (const key of keys) {
+  for (let key in employees) {
+    debugger;
     if (employees[key] > maxValue) {
       maxValue = employees[key];
+      name = key;
     }
   }
-  return console.log(`${keyn} `);
+  return name;
 };
 
 console.log(
