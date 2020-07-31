@@ -17,7 +17,6 @@ const calculateTotalPrice = function (allProducts, productName) {
       return product.price * product.quantity;
     }
   }
-  return "ничего";
 };
 
 /*
