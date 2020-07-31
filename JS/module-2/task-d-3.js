@@ -25,11 +25,11 @@ let arr1 = new Array();
 let arr2 = new Array();
 let arr3 = new Array();
 // for(let i=0;i < arr.length; i++);
-let arr = new Array(arr1, arr2, arr3);
+let arri = new Array(arr1, arr2, arr3);
 
-for (let x = 0; x < arr.length; x++) {
-  for (var j = 0; j < arr[x].length; j++) {
-    document.write(arr[x][j] + "");
+for (let x = 0; x < arri.length; x++) {
+  for (var j = 0; j < arri[x].length; j++) {
+    document.write(arri[x][j] + "");
   }
   document.write("@");
 }
