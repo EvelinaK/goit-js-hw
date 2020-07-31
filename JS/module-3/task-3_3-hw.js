@@ -8,7 +8,6 @@ const findBestEmployee = function (employees) {
   let name;
   let maxValue = 0;
   for (let key in employees) {
-    debugger;
     if (employees[key] > maxValue) {
       maxValue = employees[key];
       name = key;

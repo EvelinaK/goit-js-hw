@@ -32,7 +32,6 @@
 const inventory = {
   items: ["Knife", "Gas mask"],
   add(itemName) {
-    debugger;
     console.log(`Adding ${itemName} to inventory`);
 
     this.items.push(itemName);
