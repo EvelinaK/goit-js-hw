@@ -127,8 +127,8 @@ function test44(of, to, leit) {
   //1 0.5-1.5
   //2 1.5-2
   //Math.trunc(startNum + Math.random() * (endNum + 1 - startNum)
-  0 - 10.999999999;
-  flour;
+  // 0 - 10.999999999;
+  // flour;
 
   console.log("Сгенерированный массив: " + arr1);
   console.log("Сумма чисел: " + sum);

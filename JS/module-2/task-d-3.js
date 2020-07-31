@@ -34,15 +34,15 @@ for (let x = 0; x < arr.length; x++) {
   document.write("@");
 }
 
-var arr = [
+var arr2 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
 
-for (let j = 0; j < arr.length; j++) {
-  for (let n = 0; n < arr.length; n++) {
-    if (n === arr.length - 1) document.write(arr[j][n]);
+for (let j = 0; j < arr2.length; j++) {
+  for (let n = 0; n < arr2.length; n++) {
+    if (n === arr2.length - 1) document.write(arr2[j][n]);
     else document.write(arr[j][n] + ", ");
   }
   document.write("<br>");

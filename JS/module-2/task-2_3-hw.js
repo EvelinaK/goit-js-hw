@@ -8,8 +8,8 @@
 function findLongestWord(str) {
   let longestWord = "";
 
-  for (let i = 0; i < strSplit.length; i++) {
-    if (strSplit[i].length > longestWord.length) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].length > longestWord.length) {
       longestWord = strSplit[i];
     }
   }
