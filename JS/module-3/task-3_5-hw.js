@@ -8,7 +8,6 @@ const products = [
   { name: "Дроид", price: 400, quantity: 7 },
   { name: "Захват", price: 1200, quantity: 2 },
 ];
-console.table(products);
 
 const getAllPropValues = function (arr, prop) {
   let newArr = [];
@@ -20,8 +19,6 @@ const getAllPropValues = function (arr, prop) {
       newArr.push(value.name);
     } else if (prop == "quantity") {
       newArr.push(value.quantity);
-    } else {
-      console.table(newArr);
     }
   }
   return newArr;
