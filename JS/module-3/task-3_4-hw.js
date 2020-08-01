@@ -31,5 +31,3 @@ console.log(
     chelsy: 150,
   })
 ); // 400
-
-console.log(sum); // 390
