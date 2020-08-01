@@ -12,4 +12,3 @@ const hat = {
 };
 
 hat.changeColor("orange");
-changeColor();
