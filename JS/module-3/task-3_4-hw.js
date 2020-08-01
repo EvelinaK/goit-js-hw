@@ -32,4 +32,4 @@ console.log(
   })
 ); // 400
 
-gconsole.log(sum); // 390
+console.log(sum); // 390
