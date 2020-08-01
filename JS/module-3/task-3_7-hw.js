@@ -93,7 +93,7 @@ const account = {
    * Метод ищет и возвращает объект транзакции по id
    */
   getTransactionDetails(id) {
-    for (const tran in this.transactions) {
+    for (let tran of this.transactions) {
       if (tran.id == id) {
         return tran;
       }
@@ -106,16 +106,12 @@ const account = {
    */
   getTransactionTotal(type) {
     let total = 0;
-    for (const tran in this.transactions) {
-      if (type === tran.name) {
+    for (let tran of this.transactions) {
+      if (type === tran.type) {
         total += tran.amount;
       }
     }
-    for (const tran in this.transactions) {
-      if (type === tran.name) {
-        total += tran.amount;
-      }
-    }
+
     return total;
   },
 };
@@ -127,4 +123,4 @@ account.withdraw(100);
 console.log(account.transactions);
 console.log(account.balance);
 console.log(account.getTransactionDetails());
-console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+console.log(account.getTransactionTotal("withdraw"));
