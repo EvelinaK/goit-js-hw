@@ -124,7 +124,7 @@ const account = {
 account.deposit(200);
 account.withdraw(1000);
 account.withdraw(100);
-console.table(account.transactions);
+console.log(account.transactions);
 console.log(account.balance);
-console.table(account.getTransactionDetails());
-console.table(account.getTransactionTotal(Transaction.WITHDRAW));
+console.log(account.getTransactionDetails());
+console.log(account.getTransactionTotal(Transaction.WITHDRAW));
