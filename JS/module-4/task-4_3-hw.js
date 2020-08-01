@@ -1,14 +1,14 @@
-const makeChangeColor = function () {
-  const changeColor = function (color) {
-    console.log(this);
-    this.color = color;
-  };
-  return changeColor;
-};
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log(this);
+//     this.color = color;
+//   };
+//   return changeColor;
+// };
 
-const hat = {
-  color: "blue",
-  changeColor: makeChangeColor(),
-};
+// const hat = {
+//   color: "blue",
+//   changeColor: makeChangeColor(),
+// };
 
-hat.changeColor("orange");
+// hat.changeColor("orange");
