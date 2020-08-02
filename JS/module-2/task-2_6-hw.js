@@ -20,16 +20,14 @@ function sumInput() {
   let total = 0;
   do {
     input = prompt("введите число!", 0);
-    if (Number.isNaN(Number(input))) {
-      alert("Было введено не число, попробуйте еще раз");
-      continue;
-    }
+    if (input !== null) {
+      if (Number.isNaN(Number(input))) {
+        alert("Было введено не число, попробуйте еще раз");
+        continue;
+      }
 
-    if (input == null) {
-      break;
+      numbers.push(+input);
     }
-
-    numbers.push(+input);
   } while (input !== null);
 
   for (let number of numbers) {
