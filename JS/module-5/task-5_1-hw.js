@@ -11,7 +11,7 @@ const Account = function ({ login, email }) {
 Account.prototype.getInfo = function () {
   console.log(`login: ${this.login}, email: ${this.email}`);
 };
-// console.log(Account.prototype.getInfo);
+console.log(Account.prototype.getInfo);
 
 const mango = new Account({
   login: "Mangozedog",

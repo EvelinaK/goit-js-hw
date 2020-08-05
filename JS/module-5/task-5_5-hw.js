@@ -32,8 +32,8 @@ class Car {
     return this._price;
   }
 
-  set price(NewPrice) {
-    this._price = NewPrice;
+  set price(newPrice) {
+    this._price = newPrice;
   }
   /*
    * Добавь геттер и сеттер для свойства price,
@@ -64,10 +64,13 @@ class Car {
    */
 
   accelerate(value) {
-    let resultSpeed = this.speed + value;
-    resultSpeed <= this.maxSpeed
-      ? (this.speed = resultSpeed)
-      : (this.speed = this.maxSpeed);
+    //let resultSpeed = this.speed + value;
+    // resultSpeed <= this.maxSpeed
+    //   ? (this.speed = resultSpeed)
+    //   : (this.speed = this.speed);
+    //this.speed = resultSpeed <= this.maxSpeed ? resultSpeed : this.speed;
+    this.speed =
+      this.speed + value > this.maxSpeed ? this.speed : this.speed + value;
   }
 
   /*
@@ -75,17 +78,24 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */
   decelerate(value) {
-    this.resultSpeed > 0 ? (this.speed -= value) : (this.speed = this.speed);
+    // this.resultSpeed > 0 ? (this.speed -= value) : (this.speed = this.maxSpeed);
+    if (this.resultSpeed > 0) {
+      this.speed -= value;
+    } else {
+      this.speed = this.maxSpeed;
+    }
   }
+
+  // this.resultSpeed > 0 ? (this.speed -= value) : (this.speed = this.maxSpeed);
 
   /*
    * Добавляет в поле distance киллометраж (hours * speed),
    * но только в том случае если машина заведена!
    */
   drive(hours) {
-    this.isOn = true
-      ? (this.distance = hours * this.speed)
-      : (this.distance = this.distance);
+    if (this.isOn === true) {
+      this.distance += hours * this.speed;
+    }
   }
 }
 

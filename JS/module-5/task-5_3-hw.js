@@ -25,9 +25,14 @@ class Storage {
   }
 
   removeItem(item) {
-    this.items.forEach(function (element, i, items) {
-      if (item == element) delete items[i];
-    });
+    // for (let i = 0; i < items.length; i++) {
+    //   if (items[i] == item) {
+    //     delete this.items[i];
+    //   }
+
+    if (items.indexOf(item) !== -1) {
+      items.splice(items.indexOf(item), 1);
+    }
   }
 }
 const storage = new Storage([

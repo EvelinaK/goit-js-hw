@@ -14,28 +14,30 @@
 //   при этом результат prompt записывать в массив чисел не нужно, после чего
 //   снова пользователю предлагается ввести число в prompt.
 
-function sumInput() {
-  let numbers = [];
-  let input;
-  let total = 0;
-  do {
-    input = prompt("введите число!", 0);
-    if (input !== null) {
-      if (Number.isNaN(Number(input))) {
-        alert("Было введено не число, попробуйте еще раз");
-        continue;
-      }
+a = [];
+b = [];
+c = a;
+a = b; //чне
+a = c; //tru
 
-      numbers.push(+input);
+let numbers = [];
+let input;
+let total = 0;
+do {
+  input = prompt("введите число!", 0);
+  if (input !== null) {
+    if (Number.isNaN(Number(input))) {
+      alert("Было введено не число, попробуйте еще раз");
+      continue;
     }
-  } while (input !== null);
 
+    numbers.push(+input);
+  }
+} while (input !== null);
+if (numbers.length !== 0) {
   for (let number of numbers) {
     total += +number;
   }
-
-  console.log(numbers);
-  return console.log(`Общая сумма чисел равна ${total}`);
 }
 
-sumInput();
+console.log(`Общая сумма чисел равна ${total}`);
