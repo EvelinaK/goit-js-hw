@@ -13,15 +13,11 @@ const getAllPropValues = function (arr, prop) {
   let newArr = [];
 
   for (const value of arr) {
-    if (prop == "price") {
-      newArr.push(value.price);
-    } else if (prop == "name") {
-      newArr.push(value.name);
-    } else if (prop == "quantity") {
-      newArr.push(value.quantity);
+    if (prop in value) {
+      newArr.push(value[prop]);
     }
+    // }
   }
-  return newArr;
 };
 
 /*

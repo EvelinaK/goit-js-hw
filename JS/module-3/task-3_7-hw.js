@@ -74,11 +74,13 @@ const account = {
     if (this.balance >= amount) {
       this.balance -= amount;
       this.transactions.push(this.createTransaction(amount, "withdraw"));
+      return;
     }
+
     // for (const product of allProducts) {
-    else {
-      console.log("снятие такой суммы не возможно, недостаточно средств");
-    }
+    // else {
+    console.log("снятие такой суммы не возможно, недостаточно средств");
+    // }
     // }
   },
 
@@ -93,8 +95,8 @@ const account = {
    * Метод ищет и возвращает объект транзакции по id
    */
   getTransactionDetails(id) {
-    for (let tran of this.transactions) {
-      if (tran.id == id) {
+    for (const tran of this.transactions) {
+      if (tran.id === id) {
         return tran;
       }
     }
