@@ -13,11 +13,21 @@ const getAllPropValues = function (arr, prop) {
   let newArr = [];
 
   for (const value of arr) {
-    if (prop in value) {
+    if (value.hasOwnProperty(prop)) {
       newArr.push(value[prop]);
     }
-    return newArr;
+    // или // const getAllPropValues = function (arr, prop) {
+    //   let newArr = [];
+
+    //   for (const value of arr) {
+    //     if (prop in value) {
+    //       newArr.push(value[prop]);
+    //     }
+    //   }
+    //   return newArr;
+    // };
   }
+  return newArr;
 };
 
 /*
