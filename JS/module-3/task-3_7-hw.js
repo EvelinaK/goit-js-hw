@@ -22,8 +22,6 @@ const account = {
   // История транзакций
   transactions: [],
 
-  idNum: [],
-
   //  * Метод создает и возвращает объект транзакции.
   //  * Принимает сумму и тип транзакции.
   //  */
@@ -56,9 +54,13 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
+
   deposit(amount) {
+    const tran = this.createTransaction(amount, "deposit");
     this.balance += amount;
-    this.transactions.push(this.createTransaction(amount, "deposit"));
+
+    this.transactions.push(tran);
+    return tran;
   },
 
   /*
@@ -119,10 +121,16 @@ const account = {
 };
 
 // amount - количество;
-account.deposit(200);
+
+console.log("ID = " + account.deposit(200).id);
+console.log(account.deposit(200).id * 300 === 1488);
 account.withdraw(1000);
 account.withdraw(100);
 console.log(account.transactions);
 console.log(account.balance);
-console.log(account.getTransactionDetails());
+account.withdraw(1000);
+account.withdraw(2000);
+console.log(account.getTransactionDetails(account.deposit(200).id));
+console.log(account.getTransactionDetails(account.transactions[0].id));
 console.log(account.getTransactionTotal("withdraw"));
+// account.deposit().id)
