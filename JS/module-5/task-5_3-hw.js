@@ -23,21 +23,20 @@ class Storage {
     this.items.push(item);
     //item = push.this.items;
   }
-  debugger;
+
   removeItem(item) {
-    for (let i = 0; i < items.length; i++)
-      if (items[i] == item) {
-        delete this.items[i];
-      }
+    // for (let i = 0; i < items.length; i++)
+    //   if (items[i] == item) {
+    //     delete this.items[i];
+    //   }
     // for (let i of items) {
     //   if (i === item) {
     //     delete this.items(this.items[i]);
     //     // console.log(this.items[this.items.indexOf(i)]);
     //   }
-    //   // if (items.indexOf(item) !== -1) {
-    //   //   items.splice(items.indexOf(item), 1);
-    //   // }
-    // }
+    if (items.indexOf(item) !== -1) {
+      items.splice(items.indexOf(item), 1);
+    }
   }
 }
 const storage = new Storage([

@@ -2,9 +2,7 @@
 // считающую кол-во свойств в объекте. Функция возвращает число - количество свойств.
 
 const countProps = function (obj) {
-  const keys = Object.keys(obj).length;
-
-  return keys;
+  return Object.keys(obj).length;
 };
 console.log(countProps({ name: "Mango", age: 2 })); // 2
 
