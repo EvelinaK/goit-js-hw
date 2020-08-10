@@ -23,8 +23,7 @@ console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazq
 
 // Получить массив только неактивных пользователей (поле isActive).
 
-const getInactiveUsers = (users) =>
-  users.filter((user) => user.isActive !== true);
+const getInactiveUsers = (users) => users.filter((user) => !user.isActivegi);
 
 console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
@@ -71,6 +70,7 @@ console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sher
 
 const sortByActiveDays = (users) =>
   users
+
     .sort((a, b) => a.friends.length - b.friends.length)
     .map((user) => user.name);
 
