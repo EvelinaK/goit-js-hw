@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+#header {
+}
+
+/* navigation */
+
+#gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+div {
+  display: flex;
+  margin: ;
+}
+
+li {
+  list-style: none;
+}
+img {
+  width: 500px;
+  height: auto;
+  margin-bottom: 3%;
+  border: 3px solid #132324;
+  border-radius: 50%;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
