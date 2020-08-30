@@ -15,13 +15,12 @@
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
 document.addEventListener("DOMContentLoaded", () => {
-  const Input = document.querySelector("input");
   const divBox = document.querySelector("#boxes");
   const render = document.querySelector('[data-action="render"]');
   const destroy = document.querySelector('[data-action="destroy"]');
+  const input = document.querySelector("#controls > input");
 
   const createBoxes = (amount) => {
-    amount = +document.querySelector("input.num").value;
     let divSize = 30;
     for (var i = 0; i < amount; i++) {
       let div = document.createElement("div");
@@ -41,10 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const random = () => {
-    return Math.round(Math.random() * (0 - 216) + 216);
+    return Math.trunc(Math.random() * 256);
   };
 
+  const randomNumberGenerator = (startNum = 0, endNum = 255) => {
+    return Math.trunc(startNum + Math.random() * (endNum + 1 - startNum));
+  };
+
+  render.addEventListener("click", () => {
+    const amount = +input.value;
+    createBoxes(amount);
+  });
   render.addEventListener("click", createBoxes);
-  Input.addEventListener("input", textInputHandler);
   destroy.addEventListener("click", destroyBoxes);
 });
+//НАЗВАНИЕ ИЛИ САМУ ФУНКЦИЮ

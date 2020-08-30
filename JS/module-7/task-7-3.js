@@ -32,11 +32,9 @@ let ul = document.querySelector("#gallery");
 
 const createGallery = (array) =>
   array.map((arr) => {
-    return document
-      .querySelector("ul")
-      .insertAdjacentHTML(
-        "beforeEnd",
-        `<li><img src="${arr.url}" alt="${arr.alt}"></li>`
-      );
+    ul.insertAdjacentHTML(
+      "beforeEnd",
+      `<li><img src="${arr.url}" alt="${arr.alt}"></li>`
+    );
   });
 createGallery(images);
