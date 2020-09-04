@@ -11,8 +11,7 @@ input.addEventListener("input", () => {
   const span = document.querySelector("#name-output");
   if (input.value === "") {
     span.textContent = "незнакомец";
-  } else {
-    //span.textContent = e.target.value;
-    span.textContent = input.value;
   }
+  return (span.textContent = input.value);
+  //span.textContent = e.target.value;
 });

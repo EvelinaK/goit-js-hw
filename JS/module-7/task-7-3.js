@@ -32,9 +32,29 @@ let ul = document.querySelector("#gallery");
 
 const createGallery = (array) =>
   array.map((arr) => {
-    ul.insertAdjacentHTML(
-      "beforeEnd",
-      `<li><img src="${arr.url}" alt="${arr.alt}"></li>`
-    );
+    // ul.insertAdjacentHTML(
+    //   "beforeEnd",
+    //   `<li><img src="${arr.url}" alt="${arr.alt}"></li>`
+    // );
   });
-createGallery(images);
+
+const getImage = (images) => {
+  return images.reduce((html, image) => {
+    // allImg.push(image.url, image.alt);
+    html += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+    return html;
+  }, "");
+};
+console.log(getImage);
+ul.insertAdjacentHTML("afterbegin", getImage(images));
+// const galleryImages = document.querySelector("#gallery");
+// console.log(galleryImages);
+
+// const makeGallery = function (images) {
+//   return images.reduce((acc, { url, alt }) => {
+//     acc += `<li class = 'imageItem'><img src=${url} alt ="${alt}"></li>`;
+//     return acc;
+//   }, "");
+// };
+
+// galleryImages.insertAdjacentHTML("afterbegin", makeGallery(images));
