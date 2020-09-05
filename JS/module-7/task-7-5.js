@@ -7,11 +7,7 @@
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
 
 const input = document.querySelector("#name-input");
-input.addEventListener("input", () => {
-  const span = document.querySelector("#name-output");
-  if (input.value === "") {
-    span.textContent = "незнакомец";
-  }
-  return (span.textContent = input.value);
-  //span.textContent = e.target.value;
+const span = document.querySelector("#name-output");
+input.addEventListener("change", () => {
+  span.textContent = input.value.length > 0 ? input.value : "незнакомец";
 });

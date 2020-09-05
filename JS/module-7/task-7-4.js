@@ -14,7 +14,7 @@
   </button>
 </div> */
 
-let counterValue = 0;
+let counterValue = 1;
 let span = document.querySelector("#value");
 
 const decrement = document.querySelector("[data-action='decrement']");

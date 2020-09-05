@@ -24,16 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const linklImg = document.querySelector(".gallery__link");
   const lightboxOverlay = lightboxRef.querySelector(".lightbox__overlay");
   const openmodal = (event) => {
+    debugger;
     if (event.target.classList.contains("gallery__image")) {
+      debugger;
       event.preventDefault();
       console.log(event.target);
       lightboxRef.classList.add("is-open");
       lightboxOverlay.classList.add("is-open");
       lightboxImg.src = event.target.dataset.source;
-      lightboxOverlay.addEventListener("keypress", function (event) {
-        if (event.keyCode === 27) {
-          lightboxOverlay.classList.remove("is-open");
-        }
+      lightboxOverlay.addEventListener("keydown", function (event) {
+        debugger;
+        if (event.keyCode === 27) lightboxOverlay.classList.remove("is-open");
       });
     }
   };
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxRef.classList.remove("is-open");
     lightboxOverlay.classList.remove("is-open");
     lightboxImg.src = "";
-    lightboxOverlay.removeEventListener("keypress", event);
+    lightboxOverlay.removeEventListener("keydown", event);
   };
 
   galleryRef.addEventListener("click", openmodal);
